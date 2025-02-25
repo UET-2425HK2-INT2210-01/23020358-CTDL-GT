@@ -36,7 +36,7 @@ class Linkedlist{
         }
     }
     void del(int p){
-        if(p == 0){
+        if(p == 0) {
             Node* temp = head;
             head = head->next;
             delete temp;
@@ -50,7 +50,7 @@ class Linkedlist{
             delete bin;
         }
     }
-    void display(){
+    void display() {
         Node* temp = head;
         while(temp){
             cout<<temp->x<<" ";
@@ -58,7 +58,7 @@ class Linkedlist{
         }
     }
 };
-int main(){
+int main() {
     Linkedlist list;
     int n;
     cin>>n;
