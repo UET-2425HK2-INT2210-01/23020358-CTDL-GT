@@ -9,19 +9,18 @@ class Linkedlist{
     public:
         Linkedlist() : head(NULL) {}
     void insert(int data, int p){
-        if (p == 0){
+        if (p == 0) {
             Node* newNode = new Node();
             newNode->x = data;
             newNode->next = head;
             head = newNode;
             return;
-        }
-        else{
+        } else {
             Node* temp = head;
-            for(int i = 0; i < p-2 && temp;++i){
+            for (int i = 0; i < p-1 && temp; ++i){
                 temp = temp->next;
             }
-            if(temp->next == NULL){
+            if (temp->next == NULL){
                 Node* newNode = new Node();
                 newNode->x = data;
                 temp->next = newNode;
@@ -46,9 +45,9 @@ class Linkedlist{
             for(int i = 0; i < p-2 && temp;++i){
                     temp = temp->next;
                 }
-                    Node* bin = temp->next;
-                    temp->next = temp->next->next;
-                    delete bin;
+            Node* bin = temp->next;
+            temp->next = temp->next->next;
+            delete bin;
         }
     }
     void display(){
