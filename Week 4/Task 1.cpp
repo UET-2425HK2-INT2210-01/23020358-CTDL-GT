@@ -1,0 +1,2 @@
+// Properties 1: Các key sau khi qua hash function khi có thay đổi nhỏ sẽ dẫn đến một value hoàn toàn khác. Do đó các các value chỉ có thể truy cập với keu của nó
+// Properties 2: Có tính áp dụng cao trong mã hóa.
