@@ -119,15 +119,12 @@ class Tree{
         cout<<"\n";
     }
     // check if the tree is binary or not
-    bool ifbinary() {
-        Node* temp1 = root;
-        while(temp1->firstchild) {
-            Node* temp2 = temp1;
-            while(temp2->sibling) {
-                if (temp2->childnum > 2) return false;
-                temp2 = temp2->sibling;
-            }
-            temp1 = temp1->firstchild;
+    bool ifbinary(Node* temp) {
+        if (temp == nullptr) return true;
+        return ifbinary(temp->firstchild);
+        while(temp->sibling) {
+            if (temp->childnum > 2) return false;
+            temp = temp->sibling;
         }
         return true;
     }
@@ -143,7 +140,7 @@ class Tree{
             Inorder(temp->firstchild->sibling);
     }
     void printInorder() {
-        if (!ifbinary()) {
+        if (!ifbinary(root)) {
             cout<<"NOT BINARY TREE\n";
         } else {
             Inorder(root);
