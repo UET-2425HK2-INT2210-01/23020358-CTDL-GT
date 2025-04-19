@@ -11,6 +11,7 @@ void infromfile() {
     }
     input.close();
 }
+//quick sort
 void sort(std::vector<int> &arr, int left, int right) {
     int mid = (right + left) / 2;
     int pivot = arr[mid];

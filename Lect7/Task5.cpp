@@ -11,6 +11,7 @@ void print(int a, int s[], bool f[], int index) {
         cout<<std::endl;
         return;
     }
+    //backtrack
     for(int j = 1; j <= a; j++) {
         if (f[j] == false) {
             s[index] = j;

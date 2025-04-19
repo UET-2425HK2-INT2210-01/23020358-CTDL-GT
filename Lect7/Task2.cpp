@@ -23,6 +23,7 @@ void instream() {
         }
     }
 }
+//sum of 2D prefix
 void prefix(vector<vector<int>> &arr) {
     for (int i = 1; i < arr.size(); i++) {
         for (int j = 1; j < arr[i].size(); j++) {
@@ -30,6 +31,7 @@ void prefix(vector<vector<int>> &arr) {
         }
     }
 }
+//find max result and position
 void result() {
     prefix(arr);
     int max = INT_MIN;

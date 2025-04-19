@@ -11,6 +11,7 @@ void print(int a, int s[], int index) {
         cout<<std::endl;
         return;
     }
+    //backtrack
     s[index] = 0;
     print(a, s, index + 1);
     s[index] = 1;
