@@ -17,14 +17,11 @@ int main() {
             l[i][j] = 0;
         }
     }
-    //set base condition
-    for (int j = 1; j <= n; j++) {
-        l[1][a[j]] = a[j];
-    }
     //apply Dynamic Programming
-    //with l[i][j] is max value stastified the problem
+    //with l[i][j] is max value stastified
     //we have l[i][j] = max(l[i-1][j - a[i]] + b[i], l[i - 1][j]) if we has a[i] < j
     //else we take value l[i][j] = l[i - 1][j]
+    //heil Dynamische Programmierung
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= W; j++) {
             if (a[i] <= j) {
@@ -34,12 +31,5 @@ int main() {
             }
         }
     }
-    //find maximum
-    int max = 0;
-    for (int i = 0; i <= n; i++) {
-        for (int j = 0; j <= W; j++) {
-            max = (l[i][j] > max) ? l[i][j] : max;
-        }
-    }
-    cout<<max;
+    cout<<l[n][W];
 }
