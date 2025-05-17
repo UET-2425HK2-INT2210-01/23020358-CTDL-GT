@@ -39,7 +39,6 @@ int main() {
         int a,b;
         cin>>a>>b;
         arr[a].push_back(b);
-        arr[b].push_back(a);
     }
     cout<<path(arr,visited,parent,end,start);
 }
